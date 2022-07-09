@@ -1,21 +1,25 @@
 #include "../lib/raylib/src/raylib.h"
-#include <stdio.h>
+
 #include <string>
 
 int main() {
-    InitWindow(600, 400, "Pong");
-    SetTargetFPS(60);
+    InitWindow(800, 600, "Pong");
     SetWindowState(FLAG_VSYNC_HINT);
 
+    float ballX;
+    float ballY;
+    float ballRadius;
+
     while(!WindowShouldClose()) {
-        // will just print FPS basically
         BeginDrawing();
 
         ClearBackground(BLACK);
-        DrawFPS(0, 0);
 
-        EndDrawing();
+        // pong ball
+        DrawCircle((GetScreenWidth()) / 2, (GetScreenHeight() / 2), 5, WHITE);
+
+        // left paddle
+        DrawRectangle()
     }
-
-    return 0;
+    return 0;   
 }
